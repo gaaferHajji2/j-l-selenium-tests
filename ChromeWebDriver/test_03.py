@@ -15,4 +15,20 @@ driver.get("https://www.letskodeit.com/practice");
 print("The Title Of Page is: ", driver.title);
 print("The Current URL Of Page Is: ", driver.current_url);
 
-time.sleep(10);
+driver.get("https://www.letskodeit.com/");
+
+print("The Current URL Of Page Is: ", driver.current_url);
+
+driver.back();
+
+print("The Current URL Of Page Is: ", driver.current_url);
+
+driver.forward();
+
+print("The Current URL Of Page Is: ", driver.current_url);
+
+print("The Page Source Length Is: ", len(driver.page_source));
+
+driver.quit();
+
+# time.sleep(10);
