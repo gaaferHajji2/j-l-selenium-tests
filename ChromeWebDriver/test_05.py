@@ -4,6 +4,11 @@ from selenium.webdriver.chrome.service import Service;
 
 from selenium.webdriver.common.by import By;
 
+from selenium.webdriver.support.ui import WebDriverWait;
+from selenium.webdriver.support import expected_conditions as EC;
+
+from selenium.webdriver import Keys;
+
 import time;
 
 service = Service(executable_path="chromedriver.exe");
@@ -16,9 +21,19 @@ search_element = driver.find_element(By.XPATH, "//textarea[@id='APjFqb']");
 
 search_element.send_keys("Testing Using Selenium And BS4");
 
-search_btn = driver.find_element(By.XPATH, "//div[@class='lJ9FBc']//input[@value='Google Search']");
+img_element = driver.find_element(By.XPATH, "//img[@class='lnXdpd']");
 
-search_btn.click();
+img_element.click();
+
+WebDriverWait(driver=driver, timeout=15).until(
+    EC.presence_of_element_located((By.XPATH, "//input[@name='btnK']"))
+)
+
+search_btn = driver.find_elements(By.XPATH, "//input[@name='btnK']");
+
+# driver.implicitly_wait(5);
+
+search_btn[1].click();
 
 time.sleep(10);
 
