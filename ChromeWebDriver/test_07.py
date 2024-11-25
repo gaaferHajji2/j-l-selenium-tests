@@ -37,6 +37,7 @@ print("Select By Value: bmw");
 time.sleep(1);
 
 # The Index Start From Zero.
+# The Index Start From Zero And Index Can Be String.
 select_element.select_by_index(1);
 print("Select By Index: 1")
 
