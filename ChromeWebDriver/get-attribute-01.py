@@ -30,4 +30,8 @@ elem_type = name_element.get_attribute('type');
 elem_place_holder = name_element.get_attribute('placeholder');
 elem_val = name_element.get_attribute('value');
 
-driver.quit();
+print("The Element Type Is: ", elem_type);
+print("The Element PlaceHolder is: ", elem_place_holder);
+print("The Element Value Is: ", elem_val);
+
+# driver.quit();
