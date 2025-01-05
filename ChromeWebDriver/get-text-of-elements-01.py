@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait;
 
 from selenium.webdriver.support import expected_conditions as EC;
 
-
 service = Service(executable_path='chromedriver.exe');
 
 driver = webdriver.Chrome(service=service);
