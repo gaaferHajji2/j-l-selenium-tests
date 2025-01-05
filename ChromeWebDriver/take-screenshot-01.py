@@ -44,5 +44,11 @@ try:
     title = driver.execute_script("return document.title");
 
     print("The Title Of Document Is: ", title);
+
+    height = driver.execute_script("return window.innerHeight;");
+    width  = driver.execute_script("return window.innerWidth");
+
+    print("The Height Of Window Is: " + str(height));
+    print("The Width Of Window Is: " + str(width));
 except Exception as e:
     print("The Error Is: ", e.__str__());
