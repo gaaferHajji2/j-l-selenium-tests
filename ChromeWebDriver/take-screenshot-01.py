@@ -40,5 +40,9 @@ dest_file_name = str(time.time()) + "_j-l-screen-shot.png";
 
 try:
     driver.save_screenshot(dest_file_name);
+
+    title = driver.execute_script("return document.title");
+
+    print("The Title Of Document Is: ", title);
 except Exception as e:
     print("The Error Is: ", e.__str__());
