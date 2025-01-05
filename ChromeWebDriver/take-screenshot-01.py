@@ -34,6 +34,8 @@ submit_btn = driver.find_element(By.ID, 'login');
 
 submit_btn.click();
 
+# location = submit_btn.location_once_scrolled_into_view
+
 time.sleep(3);
 
 dest_file_name = str(time.time()) + "_j-l-screen-shot.png";
@@ -50,5 +52,14 @@ try:
 
     print("The Height Of Window Is: " + str(height));
     print("The Width Of Window Is: " + str(width));
+
+    t1 = driver.find_element(By.LINK_TEXT, "Cookie Policy");
+    location = t1.location_once_scrolled_into_view;
+
+    for key, value in location.items():
+        print("The Key Is: ", key, ", The Value Is: ", value);
+
+    time.sleep(2);
+
 except Exception as e:
     print("The Error Is: ", e.__str__());
