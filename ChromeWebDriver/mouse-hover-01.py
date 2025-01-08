@@ -16,7 +16,7 @@ driver.maximize_window();
 
 driver.get("https://www.letskodeit.com/practice");
 
-driver.execute_script("window.scrollBy(0, 600)");
+driver.execute_script("window.scrollBy(0, 700)");
 
 time.sleep(1);
 
@@ -32,7 +32,10 @@ try:
     t2 = driver.find_element(By.XPATH, '//div[@class="mouse-hover"]//a[text()="Top"]');
     t3 = driver.find_element(By.XPATH, '//div[@class="mouse-hover"]//a[text()="Reload"]');
 
-    t2.click();
+    # t2.click();
+
+    # Second Way
+    actionChains.move_to_element(to_element=t2).click().perform();
 
     time.sleep(3);
 
