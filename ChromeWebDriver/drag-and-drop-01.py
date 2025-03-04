@@ -27,7 +27,7 @@ driver.switch_to.frame(frame_reference=w2);
 t1 = WebDriverWait(
     driver=driver, 
     timeout=15, 
-    poll_frequency=2.0
+    poll_frequency=1.0
 ).until(
     EC.presence_of_element_located(
         (By.XPATH, '//div[@id="draggable"]')
