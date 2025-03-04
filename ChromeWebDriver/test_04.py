@@ -17,11 +17,11 @@ driver.maximize_window();
 
 driver.get("https://www.letskodeit.com/");
 
-WebDriverWait(driver=driver, timeout=15).until(
+login_element = WebDriverWait(driver=driver, timeout=15).until(
     EC.presence_of_element_located((By.XPATH, '//a[@href="/login"]'))
 );
 
-login_element = driver.find_element(By.XPATH, '//a[@href="/login"]');
+#  driver.find_element(By.XPATH, '//a[@href="/login"]');
 
 print("The Login Element IS: ", login_element);
 
@@ -29,11 +29,9 @@ login_element.click();
 
 print("The Current Page URL Is: ", driver.current_url);
 
-WebDriverWait(driver=driver, timeout=15).until(
+email_input = WebDriverWait(driver=driver, timeout=15).until(
     EC.presence_of_element_located((By.XPATH, '//input[@id="email"]'))
 )
-
-email_input = driver.find_element(By.XPATH, '//input[@id="email"]');
 
 password_input = driver.find_element(By.XPATH, '//input[@id="login-password"]');
 

@@ -15,11 +15,11 @@ class TestGetElementByIdAndNameAndXPathAndCSSSelectorAndMore:
     def get_page(self):
         self.driver.get("https://www.letskodeit.com/practice");
 
-        WebDriverWait(driver=self.driver, timeout=15).until(
+        self.element = WebDriverWait(driver=self.driver, timeout=15).until(
             EC.presence_of_element_located((By.XPATH, '//input[@id="bmwradio"]'))
         )
 
-        self.element = self.driver.find_element(By.XPATH, '//input[@id="bmwradio"]');
+        #  = self.driver.find_element(By.XPATH, '//input[@id="bmwradio"]');
 
         self.element_02 = self.driver.find_element(By.ID, 'name');
 

@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By;
 from selenium.webdriver.support.ui import WebDriverWait;
 from selenium.webdriver.support import expected_conditions as EC;
 
-from selenium.webdriver import Keys;
+# from selenium.webdriver import Keys;
 
 import time;
 
@@ -35,7 +35,7 @@ WebDriverWait(driver=driver, timeout=15).until(
     EC.presence_of_element_located((By.XPATH, "//input[@name='btnK']"))
 )
 
-search_btn = driver.find_elements(By.XPATH, "//input[@name='btnK']");
+search_btn =  driver.find_elements(By.XPATH, "//input[@name='btnK']");
 
 # driver.implicitly_wait(5);
 

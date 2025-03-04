@@ -17,11 +17,9 @@ driver.maximize_window();
 
 driver.get("https://www.letskodeit.com/practice");
 
-WebDriverWait(driver=driver, timeout=15).until(
+text_element = WebDriverWait(driver=driver, timeout=15).until(
     EC.presence_of_element_located((By.ID, 'displayed-text'))
 );
-
-text_element = driver.find_element(By.XPATH, '//input[@id="displayed-text"]');
 
 print("Text Element Is: ", text_element);
 

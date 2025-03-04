@@ -8,7 +8,6 @@ class TestChromeDriver:
 
     def __init__(self):
         self.ex_path = 'chromedriver.exe';
-        pass;
 
     def test_01(self):
         service = Service(executable_path=self.ex_path);

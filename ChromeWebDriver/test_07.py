@@ -19,11 +19,9 @@ driver.maximize_window();
 
 driver.get("https://www.letskodeit.com/practice");
 
-WebDriverWait(driver=driver, timeout=15).until(
+element = WebDriverWait(driver=driver, timeout=15).until(
     EC.presence_of_element_located((By.XPATH, '//select[@id="carselect"]'))
 );
-
-element = driver.find_element(By.XPATH, '//select[@id="carselect"]');
 
 print("Select Element Of Car List Is: ", element);
 
@@ -32,7 +30,7 @@ time.sleep(2);
 select_element = Select(element);
 
 select_element.select_by_value('honda');
-print("Select By Value: bmw");
+print("Select By Value: honda");
 
 time.sleep(1);
 
@@ -44,7 +42,7 @@ print("Select By Index: 1")
 time.sleep(1);
 
 select_element.select_by_visible_text('BMW');
-print("Select By Visible Text")
+print("Select By Visible Text: BMW")
 
 time.sleep(1);
 
