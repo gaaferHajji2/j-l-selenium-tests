@@ -2,3 +2,4 @@
 chromedriver.exe
 *.png
 *.zip
+__pycache__/
