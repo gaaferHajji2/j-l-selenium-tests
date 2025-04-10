@@ -8,7 +8,7 @@ class Test02(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        print('This Is From TearDown For Enitre Class')
+        print('This Is From TearDown For Entire Class')
 
     def test_method_01(self):
         print("Running From Method-01");
