@@ -15,5 +15,6 @@ class Test02(unittest.TestCase):
 
     def test_method_02(self):
         print("Running From Method-02");
+
 if __name__ == '__main__':
     unittest.main(verbosity=3)
