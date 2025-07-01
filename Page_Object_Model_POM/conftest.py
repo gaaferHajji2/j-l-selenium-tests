@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 
 import pytest
 
-@pytest.fixture()
+@pytest.fixture(scope='session')
 def get_chrome_driver():
     service = Service(executable_path='./chromedriver.exe');
 
