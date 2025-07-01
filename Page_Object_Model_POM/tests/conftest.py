@@ -16,6 +16,8 @@ def get_driver_and_web_wait():
 
     wait = WebDriverWait(driver=driver, timeout=15, poll_frequency=1.0)
 
+    driver.maximize_window()
+
     yield driver, wait
 
     driver.quit()
