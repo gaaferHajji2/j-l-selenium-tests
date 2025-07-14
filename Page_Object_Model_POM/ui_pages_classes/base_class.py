@@ -19,7 +19,7 @@ class BasePageClass(ABC):
         element.click()
     
     def send_keys(self, locator: Tuple[str, str], text: str):
-        element = self.driver.find_element(locator[0], locator[1])
+        element = self.driver.find_element(*locator)
         element.send_keys(text)
     
     def return_url(self):
