@@ -10,11 +10,7 @@ class BasePageClass(ABC):
     def __init__(self, driver: webdriver.Chrome, wait: WebDriverWait):
         self.driver = driver
         self.wait = wait
-
-    @abstractmethod
-    def set_url(self, url: str):
-        pass
-
+        
     def wait_for_element(self, locator: Tuple[str, str]):
         return self.wait.until(EC.presence_of_element_located(locator=locator))
     
