@@ -1,10 +1,9 @@
 from selenium import webdriver
-
 from selenium.webdriver.chrome.service import Service
-
 # from selenium.webdriver.support import expected_conditions as EC
-
 from selenium.webdriver.support.ui import WebDriverWait
+
+import time
 
 import pytest
 
@@ -24,5 +23,7 @@ def get_driver_and_web_wait():
     driver.get(base_url)
 
     yield driver, wait
+
+    time.sleep(1)
 
     driver.quit()

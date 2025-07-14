@@ -10,6 +10,7 @@ class LoginPage(BasePageClass):
     EMAIL_ADDRESS = (By.XPATH, "//input[@placeholder='Email Address']")
     PASSWORD = (By.XPATH, "//input[@id='login-password']")
     LOGIN_PAGE_URL = "https://www.letskodeit.com/login"
+    LOGIN_BTN = (By.XPATH, "//button[@id='login']")
 
     def __init__(self, driver, wait):
         super().__init__(driver, wait)
@@ -20,6 +21,9 @@ class LoginPage(BasePageClass):
     def enter_email_addr(self):
         self.send_keys(locator=self.EMAIL_ADDRESS, text="test@email.com")
     
-    def enter_password(self, ):
+    def enter_password(self):
         self.send_keys(locator=self.PASSWORD, text="abcabc")
+    
+    def click_login_btn(self):
+        self.click(self.LOGIN_BTN)
         
