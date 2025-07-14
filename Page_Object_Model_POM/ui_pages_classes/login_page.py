@@ -1,7 +1,7 @@
 
-from ui_pages_classes import base_class
+from ui_pages_classes.base_class import BasePageClass
 
-class LoginPage(base_class):
+class LoginPage(BasePageClass):
     def __init__(self, driver, wait):
         super().__init__(driver, wait)
 
