@@ -10,7 +10,7 @@ class BasePageClass(ABC):
     def __init__(self, driver: webdriver.Chrome, wait: WebDriverWait):
         self.driver = driver
         self.wait = wait
-        
+
     def wait_for_element(self, locator: Tuple[str, str]):
         return self.wait.until(EC.presence_of_element_located(locator=locator))
     
@@ -21,3 +21,6 @@ class BasePageClass(ABC):
     def send_keys(self, locator: Tuple[str, str], text: str):
         element = self.driver.find_element(locator[0], locator[1])
         element.send_keys(text)
+    
+    def return_url(self):
+        return self.driver.current_url
