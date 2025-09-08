@@ -10,6 +10,6 @@ def test_login_page(get_driver_and_web_wait):
 
     assert loginPage.return_url() == "https://www.letskodeit.com/login"
 
-    loginPage.enter_email_addr()
-    loginPage.enter_password()
+    loginPage.enter_email_addr(email="test@email.com")
+    loginPage.enter_password(password="abcabc")
     loginPage.click_login_btn()
