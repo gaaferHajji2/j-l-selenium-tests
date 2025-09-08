@@ -2,14 +2,13 @@ from selenium.webdriver.common.by import By
 
 from ui_pages_classes.base_class import BasePageClass
 
-
 # XPATH --> //a[text()='Sign In'] --> For Sign In Link
 class LoginPage(BasePageClass):
 
     LOGIN_LINK = (By.XPATH, "//a[text()='Sign In']")
     EMAIL_ADDRESS = (By.XPATH, "//input[@placeholder='Email Address']")
     PASSWORD = (By.XPATH, "//input[@id='login-password']")
-    LOGIN_PAGE_URL = "https://www.letskodeit.com/login"
+    # LOGIN_PAGE_URL = "https://www.letskodeit.com/login"
     LOGIN_BTN = (By.XPATH, "//button[@id='login']")
 
     def __init__(self, driver, wait):

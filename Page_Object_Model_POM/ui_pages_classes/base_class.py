@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
