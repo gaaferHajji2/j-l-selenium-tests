@@ -17,10 +17,10 @@ class LoginPage(BasePageClass):
     def click_login_link(self):
         self.click(self.LOGIN_LINK)
     
-    def enter_email_addr(self, email: str):
+    def enter_email_addr(self, email: str = ""):
         self.send_keys(locator=self.EMAIL_ADDRESS, text=email)
     
-    def enter_password(self, password: str):
+    def enter_password(self, password: str = ""):
         self.send_keys(locator=self.PASSWORD, text=password)
     
     def click_login_btn(self):
