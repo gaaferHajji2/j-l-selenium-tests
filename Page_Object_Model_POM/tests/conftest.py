@@ -19,13 +19,3 @@ def get_driver_and_web_wait():
     yield driver, wait
     time.sleep(1)
     driver.quit()
-
-# For Testing Only
-# For generating dynamic data at runtime
-def pytest_generate_tests(metafunc):
-    if "my_parameter" in metafunc.fixturenames:
-        metafunc.parametrize("my_parameter", ["value_a", "value_b"])
-
-# test_example.py
-def test_dynamic_param(my_parameter):
-    assert my_parameter in ["value_a", "value_b"]
